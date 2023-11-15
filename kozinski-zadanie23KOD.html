@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function okno_zamknij_siejka() {
+        window.close();
+      }
+      21;
+    </script>
+  </head>
+  <body>
+    <form>
+      <textarea name="siejka" cols="80" rows="20" readonly>
+        <html>
+          <head>
+            <title>Oparta drabina</title>
+            <script language="JavaScript">
+              function M(d, x) {
+                d_liczba = parseFloat(d);
+                x_liczba = parseFloat(x);
+                M_wynik = d_liczba ** 2 + x_liczba ** 2;
+                M_wyniksq = Math.sqrt(M_wynik);
+                document.getElementsByName("drabinaokno")[0].value =
+                  M_wyniksq.toFixed(2); /* na dokument */
+                alert("M=" + M_wyniksq.toFixed(2) + " cm"); /*do okna Alert */
+                pokaz1.innerHTML =
+                  "M=" + M_wyniksq.toFixed(2) + " cm" + "<br>"; /* do tabeli */
+              }
+              function alfa(d, x) {
+                d_liczba = parseFloat(d);
+                x_liczba = parseFloat(x);
+                alfa_wynik = (Math.atan2(d_liczba, x_liczba) * 180) / Math.PI;
+                alfawynsq = alfa_wynik;
+                document.getElementsByName("alfaokno")[0].value = alfawynsq.toFixed(2);
+                alert("alfa=" + alfawynsq.toFixed(2) + " cm^2");
+                pokaz2.innerHTML = "alfa=" + alfawynsq.toFixed(2) + "cm^2";
+              }
+            </script>
+          </head>
+          <body>
+            Obliczenia
+            <br />
+            <br />
+            <form
+              name="formularz"
+              action="..."
+              onsubmit="M(this.woparcie.value,this.ooparcie.value); alfa(this.woparcie.value,this.ooparcie.value);return false"
+            >
+              Podaj wysokość oparcia drabiny
+              <input size="6" name="woparcie" />
+              Podaj odległość oparcia drabiny
+              <input size="6" name="ooparcie" />
+              <br />
+              <br />
+              <input type="submit" value="oblicz" />
+              <br />
+              <br />
+              Drabina
+              <input size="6" name="drabinaokno" />
+              Alfa
+              <input size="6" name="alfaokno" />
+            </form>
+            <table>
+              <tr id="pokaz1"></tr>
+              <tr id="pokaz2"></tr>
+            </table>
+          </body>
+        </html>
+        
+</textarea
+      >
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()" />
+    <script type="text/javascript"></script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function okno_zamknij_siejka() {
+        window.close();
+      }
+      21;
+    </script>
+  </head>
+  <body>
+    <form>
+      <textarea name="siejka" cols="80" rows="20" readonly>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+function pole_kozinski()
+{
+var a_kozinski= parseFloat(document.getElementById('dlugosc').value);
+var b_kozinski= a_kozinski*a_kozinski;
+document.getElementById("nazwa").innerHTML ="Pole kwadratu= "+b_kozinski.toFixed(2)+" cm^2";
+}
+function obwod_kozinski()
+{
+var a_kozinski= parseFloat(document.getElementById('dlugosc').value);
+var b_kozinski= 4*a_kozinski;
+document.getElementById("nazwa").innerHTML ="Obwód kwadratu= "+b_kozinski.toFixed(2)+" cm";
+}
+</script>
+<h1>Wszystko o KWADRACIE</h1><br><br>
+Podaj długość boku: <input type="text" id="dlugosc" value="podaj długość"> cm<br><br><br>
+<input type="button" name="pole" value="Oblicz pole" Onclick="pole_kozinski()"><br><br>
+<input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod_kozinski()"><br><br>
+<div style="color:red;font-size:50px;"id="nazwa"></div>
+</body>
+</html>
+</textarea
+      >
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()" />
+    <script type="text/javascript"></script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadanie 24</title>
+
+    <style>
+      body {
+        background-color: gray;
+        color: blue;
+        font-size: 30px;
+      }
+    </style>
+
+    <script language="JavaScript">
+      var a = parseFloat(prompt("x1=", ""));
+      var b = parseFloat(prompt("x2=", ""));
+      var y1wyn = 0;
+      var y2wyn = 0;
+      var y3wyn = 0;
+      xrad = (a * Math.PI) / 180;
+
+    
+      y1wyn = 3*Math.pow(a, 5/7);
+      
+      y2wyn = 2 *Math.cos(xrad) + 3 * Math.sin(xrad);
+
+      y3wyn = Math.cbrt(Math.pow(a,5) + 2 * Math.pow(b,4)) * Math.abs(a-b);
+
+      document.write("x1 = " + a + "&nbsp&nbsp&nbsp&nbsp&nbspx2 = " + b + "<br>");
+
+      document.write("x1 = " +a +"&nbsp&nbsp&nbsp&nbsp&nbspx2 = " +xrad.toFixed(2) +"<br>");
+
+      document.write("y1 = " +y1wyn.toFixed(2)+"<br>");
+
+      document.write("y2 = " +y2wyn.toFixed(2)+"<br>");
+
+      document.write("y3 = " +y3wyn.toFixed(2)+"<br>");
+    </script>
+  </head>
+  <body></body>
+</html>

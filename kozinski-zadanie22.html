@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+function pole_kozinski()
+{
+var a_kozinski= parseFloat(document.getElementById('dlugosca').value);
+var b_kozinski= parseFloat(document.getElementById('dlugoscb').value);
+var c_kozinski= a_kozinski*b_kozinski;
+document.getElementById("nazwa").innerHTML ="Pole prostokąta= "+c_kozinski.toFixed(2)+" cm^2";
+}
+function obwod_kozinski()
+{
+var a_kozinski= parseFloat(document.getElementById('dlugosca').value);
+var c_kozinski= 4*a_kozinski;
+document.getElementById("nazwa").innerHTML ="Obwód prosrokąta= "+c_kozinski.toFixed(2)+" cm";
+}
+</script>
+<h1>Pole i obwod prostokąta</h1><br><br>
+Podaj długość boku a: <input type="text" id="dlugosca" value="podaj długość a"> cm<br><br><br>
+Podaj długość boku b: <input type="text" id="dlugoscb" value="podaj długość b"> cm<br><br><br>
+<input type="button" name="pole" value="Oblicz pole" Onclick="pole_kozinski()"><br><br>
+<input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod_kozinski()"><br><br>
+<div style="color:red;font-size:50px;"id="nazwa"></div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<html>
+<head>
+
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styl.css">
+
+</head>
+
+<body>
+
+	<script type="text/javascript">
+	function AB_koz()
+	{
+	var xa_koz= parseFloat(document.getElementById('xadane').value);
+	var ya_koz= parseFloat(document.getElementById('yadane').value);
+	var xb_koz= parseFloat(document.getElementById('xbdane').value);
+	var yb_koz= parseFloat(document.getElementById('ybdane').value);
+	var dlugoscAB= Math.sqrt(Math.pow(xa_koz - xb_koz,2) + Math.pow(ya_koz - yb_koz,2));
+	document.getElementById("nazwa").innerHTML ="Długość boku AB= "+dlugoscAB.toFixed(2)+" cm";
+	}
+	
+	function BC_koz()
+	{
+	var xb_koz= parseFloat(document.getElementById('xbdane').value);
+	var yb_koz= parseFloat(document.getElementById('ybdane').value);
+	var xc_koz= parseFloat(document.getElementById('xcdane').value);
+	var yc_koz= parseFloat(document.getElementById('ycdane').value);
+	var dlugoscBC= Math.sqrt(Math.pow(xb_koz - xc_koz,2) + Math.pow(yb_koz - yc_koz,2));
+	document.getElementById("nazwa").innerHTML ="Długość boku BC= "+dlugoscBC.toFixed(2)+" cm";
+	}
+
+function CA_koz()
+	{
+	var xc_koz= parseFloat(document.getElementById('xcdane').value);
+	var yc_koz= parseFloat(document.getElementById('ycdane').value);
+	var xa_koz= parseFloat(document.getElementById('xadane').value);
+	var ya_koz= parseFloat(document.getElementById('yadane').value);
+	var dlugoscCA= Math.sqrt(Math.pow(xc_koz - xa_koz,2) + Math.pow(yc_koz - ya_koz,2));
+	document.getElementById("nazwa").innerHTML ="Długość boku CA= "+dlugoscCA.toFixed(2)+" cm";
+	}
+	
+	</script>
+	<h1>Obliczam długość boków</h1><br><br>
+	Podaj współrzędną xa <input type="text" id="xadane" value="podaj współrzędną xa"> cm<br><br><br>
+	Podaj współrzędną ya <input type="text" id="yadane" value="podaj współrzędną ya"> cm<br><br><br>
+	Podaj współrzędną xb <input type="text" id="xbdane" value="podaj współrzędną xb"> cm<br><br><br>
+	Podaj współrzędną yb <input type="text" id="ybdane" value="podaj współrzędną yb"> cm<br><br><br>
+	Podaj współrzędną xc <input type="text" id="xcdane" value="podaj współrzędną xc"> cm<br><br><br>
+	Podaj współrzędną yc <input type="text" id="ycdane" value="podaj współrzędną yc"> cm<br><br><br>
+	<input type="button" name="pole" value="Oblicz długość odcinka AB" Onclick="AB_koz()"><br><br>
+	<input type="button" name="pole" value="Oblicz długość odcinka BC" Onclick="BC_koz()"><br><br>
+	<input type="button" name="pole" value="Oblicz długość odcinka AC" Onclick="CA_koz()"><br><br>
+	<div style="color:red;font-size:50px;"id="nazwa"></div>
+
+</body>
+</html>

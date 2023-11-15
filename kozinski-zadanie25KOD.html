@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function okno_zamknij_siejka() {
+        window.close();
+      }
+      21;
+    </script>
+  </head>
+  <body>
+    <form>
+      <textarea name="siejka" cols="80" rows="20" readonly>
+        <!DOCTYPE html>
+        <html lang="en">
+          <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Zadanie 25</title>
+        
+            <style>
+              body {
+                background-color: gray;
+                color: blue;
+                font-size: 30px;
+              }
+            </style>
+        
+            <script language="JavaScript">
+              var n0 = parseFloat(prompt("n0=", ""));
+              var t = parseFloat(prompt("t=", ""));
+              var t1na2 = parseFloat(prompt("T1/2=", ""));
+              var lambda = 0;
+              var n = 0;
+                
+        
+              lambda =Math.log(2) / t1na2;
+              
+        
+                n = n0 * (Math.pow(Math.E,((lambda*-1)*t)));
+        
+              document.write("N0 = " + n0 + "[sztuk]" + "<br>");
+        
+              document.write("Nt = " + t + "[lat]" + "<br>");
+        
+              document.write("T1.2 = " +t1na2+ "[lat]"+"<br>");
+        
+              document.write("Lambda = " +lambda.toFixed(7)+ "[1/rok]"+"<br>");
+        
+              document.write("N = " +n.toFixed(7)+ "[sztuk]"+"<br>");
+            </script>
+          </head>
+          <!--Oskar Koziński 2p--> 
+          <body></body>
+        </html>
+        
+</textarea
+      >
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()" />
+    <script type="text/javascript"></script>
+  </body>
+</html>

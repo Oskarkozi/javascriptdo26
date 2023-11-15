@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function okno_zamknij_siejka() {
+        window.close();
+      }
+      21;
+    </script>
+  </head>
+  <body>
+    <form>
+      <textarea name="siejka" cols="80" rows="20" readonly>
+        <html>
+            <head>
+              <title>zadanie 26</title>
+              <script type="text/javascript">
+                  function obwod_kozinski()
+                  {
+                      var a_kozinski= parseFloat(document.getElementById('podstawaG').value);
+                      var b_kozinski= parseFloat(document.getElementById('podstawaD').value);
+                      var h_kozinski= parseFloat(document.getElementById('wysokosc').value);
+          
+                      var bok = Math.sqrt(Math.pow(b_kozinski - a_kozinski, 2) + Math.pow(h_kozinski, 2));
+                      var obwod = a_kozinski + b_kozinski + 2 * bok;
+                      document.getElementById("nazwa1").innerHTML ="Obwód trapezu= "+obwod.toFixed(2)+" cm";
+                  }
+          
+                  function pole_kozinski()
+                  {
+                      var a_kozinski= parseFloat(document.getElementById('podstawaG').value);
+                      var b_kozinski= parseFloat(document.getElementById('podstawaD').value);
+                      var h_kozinski= parseFloat(document.getElementById('wysokosc').value);
+          
+                      var podstawatr = (Math.abs(b_kozinski - a_kozinski))/2;
+                      var bok = Math.sqrt(Math.pow(b_kozinski - a_kozinski, 2) + Math.pow(h_kozinski, 2));
+          
+                      var pole = 0.5 * (a_kozinski + b_kozinski) * h_kozinski;
+                      document.getElementById("nazwa2").innerHTML ="Pole trapezu= "+pole.toFixed(2)+" cm^2";
+                  }
+              </script>
+            </head>
+            <body>
+              <h1>Trapez równoległy</h1><br><br>
+              Podaj długość podstawy górnej: <input type="text" id="podstawaG" value="podaj podstawe"> cm<br>
+              Podaj długość podstawy dolnej: <input type="text" id="podstawaD" value="podaj podstawe"> cm<br>
+              Podaj długość wysokości: <input type="text" id="wysokosc" value="podaj wysokosć"> cm<br><br><br>
+              <input type="button" name="pole" value="Oblicz pole" onclick="pole_kozinski()"><br><br>
+              <input type="button" name="obwod" value="Oblicz obwod" onclick="obwod_kozinski()"><br><br>
+              <div style="color:red;font-size:50px;" id="nazwa1"></div>
+              <div style="color:red;font-size:50px;" id="nazwa2"></div>
+            </body>
+          </html>
+</textarea
+      >
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()" />
+    <script type="text/javascript"></script>
+  </body>
+</html>
